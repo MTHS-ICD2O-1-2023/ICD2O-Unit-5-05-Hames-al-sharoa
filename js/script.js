@@ -3,35 +3,33 @@
 // Created by: hames.al-sharoa
 // Created on: Apr 2024
 // This file contains the JS functions for index.html
+// Copyright (c) 2022 liya getachew All rights reserved
+//
+
 "use strict"
 
-function button() {
+/**
+ * Check service worker.
+ */
+if (navigator.serviceWorker) {
+  navigator.serviceWorker.register("/ICS2O-Unit5-04-JS/sw.js", {
+    scope: "/ICS2O-Unit5-04-JS/",
+  })
+}
 
-  const lengththeAString = parseInt(document.getElementById("lengthA").value)
-  const lengththeBString = parseInt(document.getElementById("lengthB").value)
-  const lengththeCString = parseInt(document.getElementById("lengthC").value)
+/**
+ * This function displays checks if user is eligible for the discount.
+ */
+function buttonOnClick() {
+  //input
+  const day = document.getElementById("day").value
+  const age = document.getElementById("age").value
 
-  const lengthA = parseFloat(lengththeAString)
-  const lengthB = parseFloat(lengththeBString)
-  const lengthC = parseFloat(lengththeCString)
-
-  // using the cosine law
-  const angleA = Math.acos((lengthB ** 2 + lengthC ** 2 - lengthA ** 2) / (2 * lengthB * lengthC)) * (180 / Math.PI)
-  const angleB = Math.acos((lengthC ** 2 + lengthA ** 2 - lengthB ** 2) / (2 * lengthC * lengthA)) * (180 / Math.PI)
-  const angleC = Math.acos((lengthA ** 2 + lengthB ** 2 - lengthC ** 2) / (2 * lengthA * lengthB)) * (180 / Math.PI)
-  
-  if (angleA == angleB && angleA == angleC) {
-    document.getElementById("math").innerHTML =
-    "You have an equilateral triangle!" 
-  }  else if (
-    (angleA != angleB && angleC) ||
-    (angleA != angleB && angleC) 
-  ) {
-    document.getElementById("math").innerHTML =
-    "You have an isosceles triangle!"
+  if (day == "Tuesday" || day == "Thursday" || (age > 12 && age < 25)) {
+    document.getElementById("eligibility").innerHTML =
+      "You are eligible for the discount."
   } else {
-    document.getElementById("math").innerHTML =
-    "this triangle doesn't exist."
+    document.getElementById("eligibility").innerHTML =
+      "You are NOT eligible for the discount."
   }
 }
-  

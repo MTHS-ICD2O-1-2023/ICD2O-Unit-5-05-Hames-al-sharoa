@@ -1,66 +1,74 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8" />
-    <meta name="description" content="My first Radio Button Program" />
-    <meta name="keywords" content="mths, ics2o" />
-    <meta name="author" content="hames.al-sharoa" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <link rel="stylesheet" href="./css/styles.css" />
-      <link rel="stylesheet" href="https://fonts.googleeapis.com/icon?family=material+Icons" />
-      <link rel="stylesheet" href="hhtps://code.getmdl.io/1.3.0/material.indigo-pink.min.css" />
-      <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
-      <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
-      <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
-      <link rel="manifest" href="site.webmanifest" />
-      <title>Lenghts of a triangle, in JavaScript</title>
-      </head>
-      <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
-      <script src="./js/script.js"></script>
-      <!-- Note the addition for the selection component -->
-      <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
-      <header class="mdl-layout__header">
-      <div class="mdl-layout__hearder-row">
-      <span class="mdl-layout-title">Lenghts of a triangle, in JavaScript</span>
+<head>
+  <meta charset="utf-8" />
+  <meta name="description" content="Area and Perimeter of Rectangle, in JavaScript" />
+  <meta name="keywords" content="mths, icd2o" />
+  <meta name="author" content="hames.al-sharoa" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./css/style.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+  <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css" />
+  />
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
+  <link rel="manifest" href="site.webmanifest" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" media="none"
+    onload="if(media!='all')media='all'" />
+  <noscript>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+  </noscript>
+  <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.pink-deep_orange.min.css" media="none"
+    onload="if(media!='all')media='all'" />
+  <noscript>
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.pink-deep_orange.min.css" />
+  </noscript>
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
+</head>
+<title>elgibility for discount</title>
+<body>
+  <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+  <script src="./js/script.js"></script>
+  <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+    <header class="mdl-layout__header">
+      <div class="mdl-layout__header-row">
+        <span class="mdl-layout-title">eligibilty for discount</span>
       </div>
-      </header>
-      <main class="mdl-layout__content">
-        <div class="right-image"
-          <img src="./images/triangle.png" alt="triangle image">
-          </div>
-          <br />
-          <div class="page-content">Enter 3 lengths of a triangle:</div>
-          <form action="#">
-            <div class="mdl-textfield mdl-js-textfield">
-              <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="lengthA" />
-              <input class="mdl-textfield__input" for="length A">Length Selected</label>
-              <span class="mdl-textfield__error">Input is not a number.</span>
-              </div>
-              <br />
-              <div class="mdl-textfield mdl-js-textfield">
-              <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="lengthB" />
-              <input class="mdl-textfield__input" for="length B">Length Selected</label>
-              <span class="mdl-textfield__error">Input is not a number.</span>
-              </div>
-              <br />
-              <div class="mdl-textfield mdl-js-textfield">
-              <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="lengthC" />
-              <input class="mdl-textfield__input" for="length C">Length Selected</label>
-              <span class="mdl-textfield__error">Input is not a number.</span>
-              </div>
-            <br />
-            </form>
-            <!-- Accent-colored raused button with ripple -->
-            <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"
-            onclick="button()">
-            check
-            </button>
-            <br /><br />
-            <div class="page-content-answer">
-              <div id="math"></div>
-              <div id="answer"></div>
-            </div>
-          </main>
+    </header>
+    <main class="mdl-layout__content">
+      <p id="question">
+        Check if you're eligible for the museum discount here:
+      </p>
+      <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+        <label>Today is:</label>
+        <select class="mdl-textfield__input" id="day" name="day">
+          <option></option>
+          <option value="Monday">Monday</option>
+          <option value="Tuesday">Tuesday</option>
+          <option value="Wednesday">Wednesday</option>
+          <option value="Thursday">Thursday</option>
+          <option value="Friday">Friday</option>
+        </select>
+      </div>
+      <!-- Numeric Textfield -->
+      <form action="#">
+        My age:
+        <div class="mdl-textfield mdl-js-textfield">
+          <input class="mdl-textfield__input" type="text" step="any" pattern="-?[0-9]*(\.[0-9]+)?" id="age"
+            placeholder="insert age here" aria-label="age" />
+          <span class="mdl-textfield__error">Input is not a number!</span>
         </div>
-      </body>
-        </html>
+      </form>
+      <div id="eligibility">checking eligibility...</div>
+      <!-- Raised button with ripple -->
+      <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored"
+        onclick="buttonOnClick()">
+        results
+      </button>
+    </main>
+  </div>
+</body>
+</html>
