@@ -2,7 +2,6 @@
 * Created on: Apr 2024
 * This file contains the CSS for index.html
 */
-
 .mdl-layout__header-row {
   align-items: center;
   justify-content: center;
@@ -22,7 +21,7 @@
 }
 
 body {
-  background-color: #e6cccc;
+  background-color: #fdd3d3;
 }
 
 p {
@@ -33,12 +32,11 @@ p {
   padding-top: 15pt;
 }
 
-#eligibility {
+#triangle-type {
   padding-top: 15px;
-  padding-bottom: 10px;
   font-size: 120%;
 }
 
-#question {
-  font-size: 130%;
+#text {
+  font-size: 150%;
 }

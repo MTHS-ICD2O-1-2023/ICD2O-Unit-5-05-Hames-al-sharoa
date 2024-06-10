@@ -9,27 +9,49 @@
 "use strict"
 
 /**
- * Check service worker.
+ * Check servie worker.
  */
 if (navigator.serviceWorker) {
-  navigator.serviceWorker.register("/ICS2O-Unit5-04-JS/sw.js", {
-    scope: "/ICS2O-Unit5-04-JS/",
+  navigator.serviceWorker.register("/ICS2O-Unit5-05-JS/sw.js", {
+    scope: "/ICS2O-Unit5-05-JS/",
   })
 }
 
 /**
- * This function displays checks if user is eligible for the discount.
+ * This function displays an alert.
  */
-function buttonOnClick() {
-  //input
-  const day = document.getElementById("day").value
-  const age = document.getElementById("age").value
+function triangleClick() {
+  const sideA = parseInt(document.getElementById("sideA").value)
+  const sideB = parseInt(document.getElementById("sideB").value)
+  const sideC = parseInt(document.getElementById("sideC").value)
 
-  if (day == "Tuesday" || day == "Thursday" || (age > 12 && age < 25)) {
-    document.getElementById("eligibility").innerHTML =
-      "You are eligible for the discount."
+  const angleA =
+    Math.acos((sideB ** 2 + sideC ** 2 - sideA ** 2) / (2 * sideB * sideC)) *
+    (180 / Math.PI)
+  const angleB =
+    Math.acos((sideC ** 2 + sideA ** 2 - sideB ** 2) / (2 * sideC * sideA)) *
+    (180 / Math.PI)
+  const angleC =
+    Math.acos((sideA ** 2 + sideB ** 2 - sideC ** 2) / (2 * sideA * sideB)) *
+    (180 / Math.PI)
+
+  const sumOfAngles =
+    Number(angleA.toFixed(2)) +
+    Number(angleB.toFixed(2)) +
+    Number(angleC.toFixed(2))
+
+  if (sumOfAngles == 180) {
+    if (sideA == sideB && sideB == sideC && sideC == sideA) {
+      document.getElementById("triangle-type").innerHTML =
+        "Your triangle is: Equilateral"
+    } else if (sideA == sideB || sideB == sideC || sideC == sideA) {
+      document.getElementById("triangle-type").innerHTML =
+        "Your triangle is: Isosceles"
+    } else {
+      document.getElementById("triangle-type").innerHTML =
+        "Your triangle is: Scalene"
+    }
   } else {
-    document.getElementById("eligibility").innerHTML =
-      "You are NOT eligible for the discount."
+    document.getElementById("triangle-type").innerHTML = "That's no triangle."
   }
 }
